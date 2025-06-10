@@ -196,6 +196,10 @@ select {
   margin: 0 1rem 0 0rem;
 }
 
+.info__item span img {
+  filter: invert(1);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: min(100% - 2rem, 765px);
@@ -211,7 +215,9 @@ select {
   }
 
   .content {
-    color: var(--white);
+    background-color: var(--white);
+    padding: 0 2rem;
+    box-shadow: 1px 5px 14px -4px rgba(0, 0, 0, 0.75);
   }
 
   .title {
@@ -219,16 +225,11 @@ select {
     margin: 1rem 0;
   }
 
-  .content__para {
-    color: var(--white);
-  }
-
   .content__icons {
     justify-content: left;
-    margin: 1rem 0;
   }
 
-  .content__icons a:first-child {
+  .github {
     margin: 0;
   }
 
@@ -239,5 +240,42 @@ select {
 
   .work__card {
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    justify-content: space-between;
+  }
+
+  .container {
+    width: min(100% - 2rem, 1440px);
+    flex-direction: row;
+  }
+
+  .container__image {
+    margin-right: 0rem;
+  }
+
+  .image {
+    max-width: 1440px;
+  }
+
+  .content {
+    padding: 3rem 2rem 0 3rem;
+  }
+
+  .content__icons {
+    justify-content: right;
+    margin-top: 3rem;
+  }
+
+  .work__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-info .content__icons {
+    justify-content: left;
   }
 }
